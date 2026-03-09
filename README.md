@@ -9,7 +9,7 @@ Overview: DLL Injection attempts to force a running program to load and execute 
 
 # [>] How it works
 
-  1. Capturing the PID(process identification) of the target and the Explicit Path To DLL(C:\Path\to\your\dll\example.dll).
+  1. Capturing the PID(process Identifier) of the target and the Explicit Path to the target DLL(C:\Path\to\your\dll\example.dll).
   2. Process the Dll path into a memory compliant c charcter array.
   3. Open the host process using kernel32's OpenProcess Windows API function.
   4. Allocate memory in the host process using VirtualAllocEx, passing the Windows memory constants and buffer size
