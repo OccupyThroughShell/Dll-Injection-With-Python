@@ -71,6 +71,11 @@ examples:
 [!] I'd also like to state that some of this was supplemented by independent research into the Windows API documentation and particularly
     its usage in python.
 
+[!]Links to some of the sources of information I used:
+- VirtualAllocEx: https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualallocex
+- WriteProcessMemory: https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-writeprocessmemory
+- CreateRemoteThread: https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread
+- Python Inspiration: https://github.com/infodox/python-dll-injection
 
   
 
