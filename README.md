@@ -21,11 +21,11 @@ Overview: DLL Injection attempts to force a running program to load and execute 
 
 # Requirements
 
-  [>] Python 3.x
-  [>] Windows OS
-  [>] Target PID which can be found using Procmon.exe,Procexp.exe and Task Manager under the details page
-  [>] A compiled DLL file which has to match the architecture of your host program
-  [>] Administrative privileges recommended as OpenProcesses may fail without elevated rights when using PROCESS_ALL_ACCESS
+[>] Python 3.x
+[>] Windows OS
+[>] Target PID which can be found using Procmon.exe,Procexp.exe and Task Manager under the details page
+[>] A compiled DLL file which has to match the architecture of your host program
+[>] Administrative privileges recommended as OpenProcesses may fail without elevated rights when using PROCESS_ALL_ACCESS
 
 # Usage
 [>] Navigate to the tool directory and run:
