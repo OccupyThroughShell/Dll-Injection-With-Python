@@ -28,11 +28,14 @@ Overview: DLL Injection attempts to force a running program to load and execute 
  5. Administrative privileges recommended as OpenProcesses may fail without elevated rights when using PROCESS_ALL_ACCESS
 
 # Usage
-[>] Navigate to the tool directory and run:
+1. Navigate to the tool directory and run:<br>
+
     python pythonloadlibrary.py
-[>] The tool will then prompt you for:
-    [*] The PID of the target process
-    [*] The explicit path to your compiled DLL
+   
+3. The tool will then prompt you for:<br>
+    [*] The PID of the target process<br>
+    [*] The explicit path to your compiled DLL<br>
+    
 [!] Try running the tool in an administrative terminal as this will yield better results. However it is not necessary and may yield an
     interesting result like: [!] Failed remote thread: 5
 
