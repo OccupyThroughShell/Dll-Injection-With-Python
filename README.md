@@ -33,8 +33,8 @@ Overview: DLL Injection attempts to force a running program to load and execute 
     python pythonloadlibrary.py
    
 3. The tool will then prompt you for:<br>
-    [*] The PID of the target process<br>
-    [*] The explicit path to your compiled DLL<br>
+    [>] The PID of the target process<br>
+    [>] The explicit path to your compiled DLL<br>
     
 [!] Try running the tool in an administrative terminal as this will yield better results. However it is not necessary and may yield an
     interesting result like: [!] Failed remote thread: 5
