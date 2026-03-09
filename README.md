@@ -1,10 +1,10 @@
 # Educational-Windows-DLL-Injector
 
-# Disclaimer: A lightweight python implementation of the classic LoadLibrary DLL Injection method FOR EDUCATIONAL USE ONLY! Intended for use                in controlled lab environments with explicit permission from the owner or administrator of any target system.                                 REMEMBER Unauthorised use of this tool may violate local, national and international law — the author accepts no                              responsibility for misuse.
+Disclaimer: A lightweight python implementation of the classic LoadLibrary DLL Injection method FOR EDUCATIONAL USE ONLY! Intended for use                in controlled lab environments with explicit permission from the owner or administrator of any target system.                                 REMEMBER Unauthorised use of this tool may violate local, national and international law — the author accepts no                              responsibility for misuse.
 
-# Overview: DLL Injection attempts to force a running program to load and execute external code that it wasn't orginally designed to run.
+Overview: DLL Injection attempts to force a running program to load and execute external code that it wasn't orginally designed to run.
 
-# How it works
+# [>] How it works
 
   1. Capturing the PID(process identification) of the target and the Explicit Path To DLL(C:\Path\to\your\dll\example.dll).
   2. Process the Dll path into a memory compliant c charcter array.
