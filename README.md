@@ -49,7 +49,7 @@ examples:
     question is (STATUS_STACK_BUFFER_OVERRUN) which indicates that most likely the security mechanism CFG(Control Flow Guard) terminated
     the process before any exploitation could take place and it is worth investigating the faulting process.
 
-[3] Behavior Based method! Calling of OpenProcess, VirtualAllocEx, WriteProcessMemory and CreateRemoteThread: This method of detection is<br>
+[3] Behavior Based method! Calling of OpenProcess, VirtualAllocEx, WriteProcessMemory and CreateRemoteThread: This method of detection is
     easy to understand however it is underrated as interpreted languages like python are significantly harder for signature based 
     anti-virus softwares to detect, so using a behavior based model like this would be far more effective. In fact in my environment 
     Windows Defender did not prevent the execution of the code on both User and Admin cmd shells, instead the binary security 
