@@ -45,23 +45,23 @@ While modern windows systems have very capable means of prevention such as CFG(c
 SafeDLLSearchMode, WDAC(Windows Defender Application Control) among so many others. Detection is relatively simple and I will provide some
 examples:
 
-[1] In use method! Look for CreateRemoteThread API with LoadLibrary functions: These are cornerstones of the attack that is not commonly
-    <br>used in windows systems meaning there will be far less false positives than say searching for usage of VirtualAllocEx.
+1. In use method! Look for CreateRemoteThread API with LoadLibrary functions: These are cornerstones of the attack that is not commonly
+   used in windows systems meaning there will be far less false positives than say searching for usage of VirtualAllocEx.
 
-[2] Log activity method! Presence of Issued error 0xC0000409 in event viewer logs: Often DLL Injection fails like this! The error in
-    <br>question is (STATUS_STACK_BUFFER_OVERRUN) which indicates that most likely the security mechanism CFG(Control Flow Guard) terminated
-    <br>the process before any exploitation could take place and it is worth investigating the faulting process.<br>
+2. Log activity method! Presence of Issued error 0xC0000409 in event viewer logs: Often DLL Injection fails like this! The error in
+   question is (STATUS_STACK_BUFFER_OVERRUN) which indicates that most likely the security mechanism CFG(Control Flow Guard) terminated
+   the process before any exploitation could take place and it is worth investigating the faulting process.<br>
 
-[3] Behavior Based method! Calling of OpenProcess, VirtualAllocEx, WriteProcessMemory and CreateRemoteThread: This method of detection is
-    <br>easy to understand however it is underrated as interpreted languages like python are significantly harder for signature based
-    <br>anti-virus softwares to detect, so using a behavior based model like this would be far more effective. In fact in my environment
-    <br>Windows Defender did not prevent the execution of the code on both User and Admin cmd shells, instead the binary security
-    <br>mechanisms thwarted the attack.<br>
+3. Behavior Based method! Calling of OpenProcess, VirtualAllocEx, WriteProcessMemory and CreateRemoteThread: This method of detection is
+   easy to understand however it is underrated as interpreted languages like python are significantly harder for signature based
+   anti-virus softwares to detect, so using a behavior based model like this would be far more effective. In fact in my environment
+   Windows Defender did not prevent the execution of the code on both User and Admin cmd shells, instead the binary security
+   mechanisms thwarted the attack.<br>
 
-[4] Process Hunting method! Look for processes loading files that have just been created on disk: If for some reason a program has not
-    <br>been compiled with CFG(Control Flow Guard) or Windows Security Mechanisms have failed to prevent this attack. We can search for
-    <br>compromised processes like this. Tools like Sysmon(Event ID 7) can monitor for processes loading recently created DLL files from
-    <br>suspicious paths.
+4. Process Hunting method! Look for processes loading files that have just been created on disk: If for some reason a program has not
+   been compiled with CFG(Control Flow Guard) or Windows Security Mechanisms have failed to prevent this attack. We can search for
+   compromised processes like this. Tools like Sysmon(Event ID 7) can monitor for processes loading recently created DLL files from
+   suspicious paths.
 
 # References:
 
