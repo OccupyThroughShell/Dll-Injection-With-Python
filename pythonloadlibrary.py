@@ -8,7 +8,7 @@ from ctypes import *
 """
 Please note that this attack will most likely be thwarted in windows systems due to CFG or other binary security measures
 
-PAGE_READWRITE = 0x04 : This is a standard memory protection used with VirtualAllocEx. It gives us Read and Write permissions in an assingned memory space but not execution.
+PAGE_READWRITE = 0x04 = This is a standard memory protection used with VirtualAllocEx. It gives us Read and Write permissions in an assingned memory space but not execution.
 
 MEM_COMMIT | MEM_RESERVE = Used with VirtualAllocEx to reserve an address range and commit physical memory in a single call. 0x1000 represents MEM_COMMIT and 0x2000 represents MEM_RESERVE.
                            When used with | (bitwise OR) it results in hexadecimal 0x3000 which is MEM_COMMIT | MEM_RESERVE
